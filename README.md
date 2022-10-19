@@ -8,7 +8,8 @@ This is the `aggregator` of the food ordering simulation of the second laborator
 
 ## Minimum Acceptance Criteria
 
-1. Three web servers which communicates over HTTP protocol between them.2. First web server is producer which produces some data on multiple threads (more than 5) and it sends these data from multiple threds to the second web server.
+1. Three web servers which communicates over HTTP protocol between them.
+2. First web server is producer which produces some data on multiple threads (more than 5) and it sends these data from multiple threds to the second web server.
 3. Second server is aggregator which receives and aggregates data from ﬁrst server and populates producer shared resources, a queue or stack with received data.
 4. Second server also has multiple threads which extracts one by one elements from producer shared resource and is
 sending that extracted data element from second server to the third which is consumer.
