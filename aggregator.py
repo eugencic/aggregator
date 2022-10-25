@@ -69,8 +69,8 @@ def send_to_producer(name):
         pass
     
 def run_aggregator():
-    producer_thread = Thread(target = lambda: app.run(host = '0.0.0.0', port = 4040, debug = False, use_reloader = False), daemon = True)
-    producer_thread.start()
+    aggregator_thread = Thread(target = lambda: app.run(host = '0.0.0.0', port = 4040, debug = False, use_reloader = False), daemon = True)
+    threads.append(aggregator_thread)
     sleep(2)
     producer_thread_name = 1
     consumer_thread_name = 11
